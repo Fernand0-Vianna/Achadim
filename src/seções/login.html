@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Achadim!</title>
+    <link rel="stylesheet" href="../styles/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <script>
+        const emailInput = document.getElementById('email');
+        const passwordInput = document.getElementById('password');
+        const loginButton = document.getElementById('loginButton');
+        const loginForm = document.querySelector('.login-form');
+
+        function checkInputs() {
+            // Enable button only if both fields have text
+            if (emailInput.value.trim() !== '' && passwordInput.value.trim() !== '') {
+                loginButton.disabled = false;
+                loginButton.style.cursor = 'pointer';
+                loginButton.style.opacity = '1';
+            } else {
+                loginButton.disabled = true;
+                loginButton.style.cursor = 'not-allowed';
+                loginButton.style.opacity = '0.7';
+            }
+        }
+
+        // Add event listeners to both inputs
+        emailInput.addEventListener('input', checkInputs);
+        passwordInput.addEventListener('input', checkInputs);
+
+        // Handle form submission
+        loginForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Redirect to home page if form is valid
+            window.location.href = "../seções/home.html";
+        });
+
+        // Initial check in case of autofill
+        checkInputs();
+    </script>
+    <div class="login-container">
+        <h1 class="logo">Achadim!</h1>
+        <h2 class="login-title">Faça seu Login</h2>
+        
+        <div class="social-login">
+            <button class="social-button google">
+                <i class="fab fa-google"></i> Continuar com Google
+            </button>
+            <button class="social-button microsoft">
+                <i class="fab fa-microsoft"></i> Continuar com Microsoft
+            </button>
+            <button class="social-button apple">
+                <i class="fab fa-apple"></i> Continuar com Apple
+            </button>
+        </div>
+
+        <div class="separator">
+            <span>ou</span>
+        </div>
+        
+        <form class="login-form">
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" placeholder="********" required>
+            </div>
+            <button type="submit" class="login-button" id="loginButton"><a href="../seções/home.html">Entrar</a></button>
+            <p class="signup-link">Não tem uma conta? <a href="#">Cadastre-se</a></p>
+            <p class="forgot-password-link"><a href="#">Esqueceu a senha?</a></p>
+        </form>
+    </div>
+    
+</body>
+</html>

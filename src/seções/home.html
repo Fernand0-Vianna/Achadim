@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cupons - Achadim!</title>
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Link para o CSS do Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+
+    <header>
+        <nav class="container">
+            <div class="logo-container">
+                <img src="../img/LOgo.png" alt="Logo Achadim" class="logo-img">
+                <h1 class="logo">Achadim!</h1>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Pesquisar...">
+                <button class="search-button"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="nav-buttons">
+                <a href="#" class="nav-link">Categorias</a>
+                <a href="#" class="nav-link">Cupons</a>
+                <a href="#" class="nav-link">Ofertas</a>
+            </div>
+            <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+        </nav>
+    </header>
+
+    <main class="container">
+        
+        <section class="page-header">
+            <h2>Todos os Cupons de Desconto</h2>
+            <p>Selecione as melhores ofertas para economizar em suas lojas favoritas <i class="fa-solid fa-ticket"></i></p>
+            
+            <!-- Slider principal -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="../img/Slides/SLIDE1.jpg" alt="Oferta 1">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../img/Slides/SLIDE2.png" alt="Oferta 2">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../img/Slides/SLIDE3.png" alt="Oferta 3">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </section>
+
+        <section class="filter-bar">
+            <input type="text" placeholder="Pesquisar por loja ou produto...">
+            <select>
+                <option>Todas as Categorias</option>
+                <option>Eletrônicos</option>
+                <option>Moda</option>
+                <option>Viagem</option>
+                <option>Alimentos</option>
+            </select>
+        </section>
+
+        <div class="tabs">
+            <button class="tab-button active" onclick="openTab('ativos')">Cupons Ativos</button>
+            <button class="tab-button" onclick="openTab('expirados')">Cupons Expirados</button>
+        </div>
+
+        <section id="ativos" class="cupons-grid tab-content" style="display: block;">
+            
+            <div class="cupom-card">
+                <style></style>
+                <div class="cupom-header">
+                    <span class="store-name"><i class="fas fa-store"></i> Casas Bahia</span>
+                    <span class="discount-badge">-20% OFF</span>
+                </div>
+                <div class="cupom-body">
+                    <h3>20% de desconto em todo o site</h3>
+                    <p>Válido para a primeira compra. Não cumulativo com outras promoções.</p>
+                </div>
+                <div class="cupom-footer">
+                    <span class="expiry-date"><i class="far fa-clock"></i> Expira em 3 dias</span>
+                <button class="copy-button" onclick="window.location.href='https://www.casasbahia.com.br/'">
+                    CONFIRA OFERTAS
+                </button>
+                </div>
+            </div>
+
+            <div class="cupom-card destaque">
+                <div class="cupom-header">
+                    <span class="store-name"><i class="fas fa-star"></i> Super Oferta</span>
+                    <span class="discount-badge free-shipping">Frete Grátis</span>
+                </div>
+                <div class="cupom-body">
+                    <h3>Frete Grátis em compras acima de R$99</h3>
+                    <p>Aproveite sem valor mínimo para itens selecionados.</p>
+                </div>
+                <div class="cupom-footer">
+                    <span class="expiry-date"><i class="far fa-clock"></i> Expira Amanhã!</span>
+                    <button class="copy-button" onclick="alert('´FRETEGRATIS!´copiado')">
+                        VER OFERTA
+                    </button>
+                </div>
+            </div>
+
+            <div class="cupom-card">
+                <div class="cupom-header">
+                    <span class="store-name"><i class="fas fa-tag"></i> Setup Monstro!</span>
+                    <span class="discount-badge value-off">R$50 OFF</span>
+                </div>
+                <div class="cupom-body">
+                    <h3>R$50 de Desconto em Eletrônicos</h3>
+                    <p>Cupom exclusivo para itens da seção de tecnologia.</p>
+                </div>
+                <div class="cupom-footer">
+                    <span class="expiry-date"><i class="far fa-clock"></i> Válido por 7 dias</span>
+                    <button class="copy-button" onclick="alert('´TECH50COPIADO´copiado')">
+                        COPIAR CUPOM
+                    </button>
+                </div>
+            </div>
+            <div class="cupom-card">
+                <div class="cupom-header">
+                    <span class="store-name"><i class="fas fa-tag"></i> Outlet</span>
+                    <span class="discount-badge value-off">R$50 OFF</span>
+                </div>
+                <div class="cupom-body">
+                    <h3>R$50 de Desconto em Eletrônicos</h3>
+                    <p>Cupom exclusivo para itens da seção de tecnologia.</p>
+                </div>
+                <div class="cupom-footer">
+                    <span class="expiry-date"><i class="far fa-clock"></i> Válido por 7 dias</span>
+                    <button class="copy-button" onclick="alert('´TECH50COPIADO´copiado')">
+                        COPIAR CUPOM
+                    </button>
+                </div>
+            </div>            
+
+        </section>
+
+        <section id="expirados" class="cupons-grid tab-content" style="display: none;">
+            <div class="cupom-card">
+                <div class="cupom-header">
+                    <span class="store-name"><i class="fas fa-store"></i> Oferta Expirada</span>
+                    <span class="discount-badge">-30% OFF</span>
+                </div>
+                <div class="cupom-body">
+                    <h3>30% de desconto em Moda</h3>
+                    <p>Oferta expirada em 10/10/2025.</p>
+                </div>
+                <div class="cupom-footer">
+                    <span class="expiry-date"><i class="far fa-clock"></i> Expirado</span>
+                    <button class="copy-button disabled" disabled>
+                        OFERTA EXPIRADA
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            function openTab(tabName) {
+                // Esconde todos os conteúdos das abas
+                var tabContents = document.getElementsByClassName('tab-content');
+                for (var i = 0; i < tabContents.length; i++) {
+                    tabContents[i].style.display = 'none';
+                }
+
+                // Remove a classe 'active' de todos os botões
+                var tabButtons = document.getElementsByClassName('tab-button');
+                for (var i = 0; i < tabButtons.length; i++) {
+                    tabButtons[i].classList.remove('active');
+                }
+
+                // Mostra a aba selecionada e adiciona a classe 'active' ao botão
+                document.getElementById(tabName).style.display = 'grid';
+                event.currentTarget.classList.add('active');
+            }
+        </script>
+
+    </main>
+
+<!-- Ofertas -->
+<main class="container">
+        <section class="offer-gallery">
+
+            <div class="offer-card fastshop">
+                <div class="logo-box">
+                    <img src="../img/Lojas/Fast1.jpg" width="50px" height="50px" alt="Fast Shop Logo" class="logo-placeholder" style="background-color: black; color: white;">
+                </div>
+                <div class="info-box">
+                    <p class="title">Festival de Ofertas FAST</p>
+                    <p class="discount">com produtos até <strong>50% OFF</strong></p>
+                    <p class="cashback">+ até <strong>10% de cashback</strong></p>
+                    <p class="cta">Confira as melhores ofertas fast clicando no botão.</p>
+                </div>
+                <button class="action-button" onclick="alert('´FASTSHOP´ COPIADO')">VER OFERTAS</button>
+            </div>
+
+            <div class="offer-card shein">
+                <div class="logo-box">
+                    <img src="../img/Lojas/shein.jpg" width="50px" height="50px" alt="SHEIN Logo" class="logo-placeholder" style="background-color: white; color: black; border: 1px solid #333;">
+                </div>
+                <div class="info-box">
+                    <p class="title">Festival de Ofertas SHEIN</p>
+                    <p class="discount">com produtos até <strong>30% OFF</strong></p>
+                    <p class="cashback">+ até <strong>10% de cashback</strong></p>
+                    <p class="cta">Confira as melhores ofertas clicando no botão.</p>
+                </div>
+                <button class="action-button" onclick="alert('´SHEIN´ COPIADO')">VER OFERTAS</button>
+            </div>
+
+            <div class="offer-card americanas">
+                <div class="logo-box" style="background-color: #E30613;">
+                    <img src="../img/Lojas/Americanas.png" width="50px" height="50px" alt="Americanas Logo" class="logo-placeholder" style="background-color: #E30613; color: white;">
+                </div>
+                <div class="info-box">
+                    <p class="title">Festival de Ofertas Americanas</p>
+                    <p class="discount">com produtos até <strong>30% OFF</strong></p>
+                    <p class="cashback">+ até <strong>10% de cashback</strong></p>
+                    <p class="cta">Confira as melhores ofertas Americanas clicando no botão.</p>
+                </div>
+                <button class="action-button" onclick="alert('´AMERICUPOM´ COPIADO')">VER OFERTAS</button>
+            </div>
+
+            <div class="offer-card casasbahia">
+                <div class="logo-box" style="background-color: #00874F;">
+                    <img src="../img/Lojas/Casas-Bahia.jpg" width="50px" height="50px" alt="Casas Bahia Logo" class="logo-placeholder" style="background-color: #00874F; color: white;">
+                </div>
+                <div class="info-box">
+                    <p class="title">Festival de Ofertas Casas Bahia</p>
+                    <p class="discount">com produtos até <strong>30% OFF</strong></p>
+                    <p class="cashback">+ até <strong>10% de cashback</strong></p>
+                    <p class="cta">Confira as melhores ofertas clicando no botão.</p>
+                </div>
+                <button class="action-button" onclick="alert('´CBCUPOM´ COPIADO')">VER OFERTAS</button>
+            </div>
+
+            <div class="offer-card magalu">
+                <div class="logo-box" style="background-color: #0077E4;">
+                    <img src="../img/Lojas/Magalu.png" width="fill" height="fill" alt="Magalu Logo" class="logo-placeholder" style="background-color: #0077E4; color: white;">
+                </div>
+                <div class="info-box">
+                    <p class="title">Festival de Ofertas Magalu</p>
+                    <p class="discount">com produtos até <strong>40% OFF</strong></p>
+                    <p class="cashback">+ até <strong>5% de cashback</strong></p>
+                    <p class="cta">Confira as melhores ofertas Magalu clicando no botão.</p>
+                </div>
+                <button class="action-button" onclick="alert('´MAGALUCUPOM´ COPIADO')">VER OFERTAS</button>
+            </div>
+
+            <div class="offer-card kabum">
+                <div class="logo-box">
+                    <img src="../img/Lojas/kabum2.png" width="50px" height="50px" alt="Kabum" class="logo-placeholder" style="background-color: black; color: white;">
+                </div>
+                <div class="info-box">
+                    <p class="title">Festival de Ofertas KABUM!</p>
+                    <p class="discount">com produtos até <strong>40% OFF</strong></p>
+                    <p class="cashback">+ até <strong>5% de cashback</strong></p>
+                    <p class="cta">Confira as melhores ofertas Kabum clicando no botão.</p>
+                </div>
+                <button class="action-button" onclick="alert('´KABUPOM´ COPIADO')">VER OFERTAS</button>
+            </div>
+            
+            <div class="more-cupons-container">
+                <button class="more-cupons-button" color="var(--primary-color)">Mais CUPONS</button>
+            </div>
+
+        </section>
+    </main>
+
+    <main class="container" id="lojas-parceiras">
+        <section class="partners-section">
+            <h2>Lojas Parceiras</h2>
+            <p>Nossos principais parceiros com as melhores ofertas para você</p>
+            
+            <div class="swiper partners-swiper">
+                <div class="swiper-wrapper">
+                    <!-- Loja 1 -->
+                    <div class="swiper-slide partner-slide">
+                        <a href="https://www.kabum.com.br" target="_blank" class="partner-link">
+                            <div class="partner-logo-container">
+                                <img src="../img/Lojas/kabum2.png" alt="Kabum" class="partner-logo">
+                            </div>
+                            <h3>Kabum</h3>
+                            <p>Até 40% OFF em Eletrônicos</p>
+                            <span class="partner-cta">Acessar Loja</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Loja 2 -->
+                    <div class="swiper-slide partner-slide">
+                        <a href="https://www.magazineluiza.com.br" target="_blank" class="partner-link">
+                            <div class="partner-logo-container">
+                                <img src="../img/Lojas/Magalu.png" alt="Magazine Luiza" class="partner-logo">
+                            </div>
+                            <h3>Magazine Luiza</h3>
+                            <p>Frete grátis em compras acima de R$99</p>
+                            <span class="partner-cta">Acessar Loja</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Loja 3 -->
+                    <div class="swiper-slide partner-slide">
+                        <a href="https://www.americanas.com.br" target="_blank" class="partner-link">
+                            <div class="partner-logo-container">
+                                <img src="../img/Lojas/Americanas.png" alt="Americanas" class="partner-logo">
+                            </div>
+                            <h3>Americanas</h3>
+                            <p>Até 50% OFF em Eletrônicos</p>
+                            <span class="partner-cta">Acessar Loja</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Loja 4 -->
+                    <div class="swiper-slide partner-slide">
+                        <a href="https://www.casasbahia.com.br" target="_blank" class="partner-link">
+                            <div class="partner-logo-container">
+                                <img src="../img/Lojas/Casas-Bahia.jpg" alt="Casas Bahia" class="partner-logo">
+                            </div>
+                            <h3>Casas Bahia</h3>
+                            <p>Até 12x sem juros</p>
+                            <span class="partner-cta">Acessar Loja</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Loja 5 -->
+                    <div class="swiper-slide partner-slide">
+                        <a href="https://www.fastshop.com.br" target="_blank" class="partner-link">
+                            <div class="partner-logo-container">
+                                <img src="../img/Lojas/Fast1.jpg" alt="Fast Shop" class="partner-logo">
+                            </div>
+                            <h3>Fast Shop</h3>
+                            <p>Até 30% OFF em Eletrodomésticos</p>
+                            <span class="partner-cta">Acessar Loja</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Navegação -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <section class="offers">
+            <div class="container">
+                <h3>Ofertas</h3>
+                <p>Confira as melhores ofertas para você.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Achadim! | Feito com base em uma estrutura Framer.</p>
+            <p>Desenvolvido por: Fernando dos Santos | &copy; 2025, Cruzeiro do Sul ⚡ - SP</p>
+        </div>
+    </footer>
+    
+    <!-- Scripts do Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // Inicialização do Swiper do banner principal
+        var bannerSwiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+
+        // Inicialização do Swiper das lojas parceiras
+        var partnersSwiper = new Swiper(".partners-swiper", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true, // Pausa o autoplay quando o mouse está sobre o carrossel
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                // Quando a largura da janela é >= 640px
+                640: {
+                    slidesPerView: 2,
+                },
+                // Quando a largura da janela é >= 1024px
+                1024: {
+                    slidesPerView: 3,
+                },
+                // Quando a largura da janela é >= 1280px
+                1280: {
+                    slidesPerView: 4,
+                }
+            }
+        });
+
+        // Pausa o carrossel quando o mouse está sobre um slide
+        document.querySelectorAll('.partner-slide').forEach(slide => {
+            slide.addEventListener('mouseenter', () => {
+                partnersSwiper.autoplay.stop();
+            });
+            
+            slide.addEventListener('mouseleave', () => {
+                partnersSwiper.autoplay.start();
+            });
+        });
+    </script>
+</body>
+</html>

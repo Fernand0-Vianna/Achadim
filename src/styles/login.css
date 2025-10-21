@@ -1,0 +1,197 @@
+.login-container {
+    background: rgba(255, 255, 255, 0.2); /* Fundo branco transparente */
+    backdrop-filter: blur(10px); /* Efeito de desfoque */
+    -webkit-backdrop-filter: blur(10px); /* Compatibilidade Safari */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Borda sutil */
+    padding: 40px;
+    border-radius: 20px; /* Bordas mais arredondadas */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1); /* Sombra mais pronunciada */
+    width: 100%;
+    max-width: 450px; /* Aumentado ligeiramente para um visual mais 'cheio' */
+    text-align: center;
+    position: relative;
+    z-index: 1; /* Garante que o container esteja acima do fundo desfocado */
+}
+
+.login-container .logo {
+    font-family: var(--font-heading);
+    font-size: 38px; /* Ligeiramente maior */
+    color: var(--secondary-color); /* Verde mais escuro */
+    font-weight: 900;
+    margin-bottom: 15px; /* Menos espaço */
+    letter-spacing: -1px; /* Para um visual mais compacto */
+}
+
+.login-title {
+    font-family: var(--font-heading);
+    font-size: 26px; /* Ligeiramente maior */
+    color: var(--text-color);
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+/* --- ESTILOS PARA LOGIN SOCIAL --- */
+.social-login {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Aumentado ligeiramente */
+    margin-bottom: 25px; /* Aumentado ligeiramente */
+}
+
+.social-button {
+    width: 100%;
+    padding: 12px; /* Ligeiramente maior */
+    border: none; /* Remover bordas */
+    border-radius: 8px; /* Bordas mais arredondadas */
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, transform 0.2s; /* Adicionar transição para o hover */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra para botões */
+}
+
+.social-button:hover {
+    transform: translateY(-2px); /* Efeito sutil de levantar no hover */
+}
+
+.social-button i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+/* Estilos Específicos para as Marcas */
+.social-button.google {
+    background-color: white;
+    color: var(--text-color);
+}
+.social-button.google:hover {
+    background-color: #f5f5f5;
+}
+
+.social-button.microsoft {
+    background-color: #2F2F2F;
+    color: white;
+}
+.social-button.microsoft:hover {
+    background-color: #444;
+}
+
+.social-button.apple {
+    background-color: #000;
+    color: white;
+}
+.social-button.apple:hover {
+    background-color: #333;
+}
+
+/* --- ESTILOS DO SEPARADOR "OU" --- */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #999;
+    font-size: 14px;
+    margin: 25px 0; /* Aumentado ligeiramente */
+}
+
+.separator::before,
+.separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4); /* Linha mais transparente */
+}
+
+.separator:not(:empty)::before {
+    margin-right: .8em; /* Ajuste de espaçamento */
+}
+
+.separator:not(:empty)::after {
+    margin-left: .8em; /* Ajuste de espaçamento */
+}
+
+/* Formulário de Login */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px; /* Ajuste de espaçamento */
+}
+
+.input-group {
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--text-color);
+    font-size: 15px; /* Ligeiramente maior */
+}
+
+.input-group input[type="email"],
+.input-group input[type="password"] {
+    width: 100%;
+    padding: 14px; /* Aumentado o padding */
+    border: none; /* Remover borda padrão */
+    background-color: var(--light-green); /* Fundo verde claro */
+    border-radius: 8px; /* Bordas mais arredondadas */
+    font-size: 16px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1); /* Sombra interna sutil */
+    color: var(--text-color); /* Cor do texto dentro do input */
+}
+
+.input-group input[type="email"]::placeholder,
+.input-group input[type="password"]::placeholder {
+    color: #888; /* Cor do placeholder */
+}
+
+
+.input-group input[type="email"]:focus,
+.input-group input[type="password"]:focus {
+    background-color: #dcedc8; /* Verde um pouco mais escuro no foco */
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.2), 0 0 0 3px rgba(76, 175, 80, 0.3); /* Adiciona um brilho verde no foco */
+    outline: none;
+}
+
+.login-button[type="submit"] {
+    background-color: var(--primary-color); /* Cor principal verde */
+    color: rgb(82, 216, 70);
+    padding: 14px 20px; /* Aumentado o padding */
+    border: none;
+    border-radius: 8px; /* Bordas mais arredondadas */
+    font-size: 19px; /* Ligeiramente maior */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 20px; /* Mais espaço antes do botão */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para o botão */
+}
+
+.login-button[type="submit"]:hover {
+    background-color: var(--secondary-color); /* Verde mais escuro no hover */
+    transform: translateY(-2px);
+}
+
+.signup-link,
+.forgot-password-link {
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.signup-link a,
+.forgot-password-link a {
+    color: var(--secondary-color); /* Link verde mais escuro */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.signup-link a:hover,
+.forgot-password-link a:hover {
+    text-decoration: underline;
+    color: var(--primary-color);
+}

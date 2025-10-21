@@ -1,0 +1,748 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Changa:wght@200..800&family=Chango&family=Jua&display=swap');
+body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    color: var(--text-color);
+    background: linear-gradient(45deg, var(--background-gradient-start), var(--background-gradient-end));
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- HEADER / NAVIGATION --- */
+header {
+    background: #222722;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+}
+
+.logo { /* Logo Achadim! */
+    font-family: 'Changa One', sans-serif;
+    font-size: 24px;
+    font-weight: 900;
+    color: #39bf36;
+    margin: 0;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: #f5f5f5;
+    border-radius: 50px;
+    padding: 5px 15px;
+    flex: 0.5;
+    max-width: 500px;
+    margin: 0 20px;
+}
+
+.search-bar input {
+    border: none;
+    background: transparent;
+    padding: 8px 10px;
+    width: 100%;
+    font-size: 14px;
+    outline: none;
+}
+
+.search-button {
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-family: 'Changa One', sans-serif;
+}
+
+.nav-link {
+    color: #39bf36;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+.login-button {
+    font-family: 'Changa One', sans-serif;
+    background: var(--primary-color);
+    color: #04970485;
+    border-bottom: #222722;
+    text-decoration: none;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.login-button:hover {
+    background-color: #39bf36;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+}
+
+@media (max-width: 992px) {
+    .search-bar {
+        flex: 1;
+        margin: 0 15px;
+    }
+    
+    .nav-buttons {
+        display: none;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo {
+        font-size: 20px;
+    }
+    
+    .logo-img {
+        height: 60px;
+    }
+    
+    .search-bar {
+        margin: 10px 0;
+    }
+}
+
+/* --- PAGE HEADER (Título) --- */
+.page-header {
+    text-align: center;
+    padding: 50px 0 30px;
+    color: var(--text-color);
+}
+
+.page-header h2 {
+    font-family: var(--font-heading);
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+}
+
+.page-header p {
+    font-size: 18px;
+    color: #555;
+}
+
+.page-header img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+/* --- FILTER BAR --- */
+.filter-bar {
+    display: flex;
+    gap: 15px;
+    padding: 20px 0;
+    margin-bottom: 30px;
+}
+
+.filter-bar input[type="text"],
+.filter-bar select {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: white;
+    transition: border-color 0.3s;
+}
+
+.filter-bar input[type="text"] {
+    flex-grow: 1;
+}
+
+.filter-bar select {
+    width: 250px;
+}
+
+.filter-bar input:focus,
+.filter-bar select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+/* --- CUPONS GRID --- */
+.cupons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding-bottom: 80px;
+}
+
+/* --- CUPOM CARD (O principal elemento Glassmorphism) --- */
+.cupom-card {
+    background: var(--card-background);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cupom-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Destaque (Verde mais forte) */
+.cupom-card.destaque {
+    border: 2px solid var(--secondary-color);
+}
+
+/* Card Header */
+.cupom-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+}
+
+.store-name {
+    font-weight: bold;
+    color: var(--secondary-color);
+    font-size: 14px;
+}
+
+.discount-badge {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.discount-badge.free-shipping {
+    background-color: #3F51B5; /* Azul para frete grátis */
+}
+
+.discount-badge.value-off {
+    background-color: #FF9800; /* Laranja para valor fixo */
+}
+
+/* Card Body */
+.cupom-body h3 {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    color: var(--text-color);
+    margin-bottom: 5px;
+}
+
+.cupom-body p {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Card Footer */
+.cupom-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px dashed rgba(0, 0, 0, 0.1);
+}
+
+.expiry-date {
+    font-size: 13px;
+    color: #888;
+}
+
+.expiry-date i {
+    margin-right: 5px;
+}
+
+.copy-button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.copy-button:hover {
+    background-color: var(--secondary-color);
+}
+
+.copy-button.disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.copy-button.disabled:hover {
+    background-color: #cccccc;
+}
+
+/* --- TABS --- */
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tab-button {
+    padding: 12px 24px;
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    font-size: 16px;
+    font-weight: 600;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+    color: var(--primary-color);
+}
+
+.tab-button.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: grid;
+}
+
+/* --- FOOTER --- */
+footer {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+/* --- GALERIA DE OFERTAS (GRID) --- */
+.offer-gallery {
+    display: grid;
+    /* Duas colunas em telas maiores, e uma coluna empilhada em telas menores */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+}
+
+/* --- CARD DE OFERTA INDIVIDUAL --- */
+.offer-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    transition: box-shadow 0.3s;
+    height: 120px; /* Altura fixa para todos os cards */
+}
+
+.offer-card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* --- LOGO --- */
+.logo-box {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    margin-right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Ajuste para simular o logo com cor de fundo */
+    font-family: var(--font-heading);
+    font-size: 14px;
+    font-weight: 700;
+    overflow: hidden;
+}
+
+.logo-placeholder {
+    /* Estilo para quando a imagem real não está carregada */
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* Remova as propriedades de fundo e cor se usar imagens reais */
+}
+
+
+/* --- INFORMAÇÕES DO CUPOM --- */
+.info-box {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.2;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 3px;
+    color: var(--text-color);
+}
+
+.discount {
+    font-size: 13px;
+    color: var(--highlight-color); /* Vermelho para o OFF */
+}
+
+.discount strong {
+    font-size: 15px;
+}
+
+.cashback {
+    font-size: 12px;
+    color: var(--primary-color); /* Verde para o Cashback */
+    font-weight: bold;
+}
+
+.cta {
+    font-size: 10px;
+    color: #aa9b9b;
+    margin-top: 5px;
+}
+
+/* --- BOTÃO DE AÇÃO --- */
+.action-button {
+    background-color: var(--primary-color);
+    color: #04970485;
+    font-weight: bold;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+    white-space: nowrap; /* Garante que o texto do botão não quebre */
+    margin-left: 15px;
+}
+
+.action-button:hover {
+    background-color: var(--secondary-color);
+}
+
+
+/* --- BOTÃO MAIS CUPONS (Centro e Fundo) --- */
+.more-cupons-container {
+    grid-column: 1 / -1; /* Ocupa as duas colunas */
+    text-align: center;
+    padding: 40px 0 20px;
+}
+
+/* ===== CARROSSEL DE LOJAS PARCEIRAS ===== */
+.partners-section {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.partners-section h2 {
+    font-size: 2.2rem;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.partners-section > p {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.partners-swiper {
+    padding: 20px 0 50px;
+    position: relative;
+}
+
+.partner-slide {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.partner-slide:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.partner-link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-decoration: none;
+    color: #333;
+    padding: 25px 15px;
+    transition: all 0.3s ease;
+}
+
+.partner-logo-container {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.partner-logo {
+    max-width: 80%;
+    max-height: 80px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.partner-slide:hover .partner-logo {
+    transform: scale(1.05);
+}
+
+.partner-slide h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #222;
+}
+
+.partner-slide p {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.partner-cta {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: auto;
+}
+
+.partner-link:hover .partner-cta {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+/* Estilos de navegação do Swiper */
+.partners-swiper .swiper-button-next,
+.partners-swiper .swiper-button-prev {
+    color: var(--primary-color);
+    background: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.partners-swiper .swiper-button-next:after,
+.partners-swiper .swiper-button-prev:after {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.partners-swiper .swiper-pagination-bullet {
+    background: #ccc;
+    opacity: 0.7;
+}
+
+.partners-swiper .swiper-pagination-bullet-active {
+    background: var(--primary-color);
+    opacity: 1;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .partners-swiper {
+        padding: 20px 0 40px;
+    }
+    
+    .partner-slide {
+        margin: 0 10px;
+    }
+    
+    .partners-swiper .swiper-button-next,
+    .partners-swiper .swiper-button-prev {
+        display: none;
+    }
+}
+
+/* Estilos para o botão de mais cupons */
+.more-cupons-button {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 900;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 20px; /* Bordas bem arredondadas */
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.more-cupons-button:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+/* --- RESPONSIVIDADE (para celulares) --- */
+@media (max-width: 768px) {
+    .offer-gallery {
+        /* Muda para uma única coluna em telas menores */
+        grid-template-columns: 1fr;
+    }
+    
+    .offer-card {
+        height: auto; /* Permite que a altura se ajuste */
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .logo-box {
+        margin: 0 auto 15px; /* Centraliza o logo no topo */
+    }
+
+    .info-box {
+        margin-bottom: 15px;
+    }
+    
+    .action-button {
+        width: 100%; /* Botão ocupa a largura total */
+        margin-left: 0;
+    }
+}
+
+/* Estilos para o Swiper */
+.swiper {
+    width: 100%;
+    height: 400px;
+    margin: 20px 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.swiper-slide {
+    text-align: center;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-pagination-bullet {
+    background: #fff;
+    opacity: 0.7;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--primary-color);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: white;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 30px;
+}
+
+/* Estilos responsivos para o Swiper */
+@media (max-width: 768px) {
+    .swiper {
+        height: 250px;
+    }
+    
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
+    }
+}
+
+/* Estilos para o page-header */
+.page-header {
+    margin-bottom: 20px;
+}
