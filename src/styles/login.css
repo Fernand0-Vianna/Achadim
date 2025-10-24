@@ -1,3 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Changa:wght@200..800&family=Chango&family=Jua&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Changa One', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 20px;
+}
+    
+
 .login-container {
     background: rgba(255, 255, 255, 0.2); /* Fundo branco transparente */
     backdrop-filter: blur(10px); /* Efeito de desfoque */
@@ -14,7 +30,7 @@
 }
 
 .login-container .logo {
-    font-family: var(--font-heading);
+    font-family: Changa One;
     font-size: 38px; /* Ligeiramente maior */
     color: var(--secondary-color); /* Verde mais escuro */
     font-weight: 900;
@@ -23,7 +39,7 @@
 }
 
 .login-title {
-    font-family: var(--font-heading);
+    font-family: Changa One;
     font-size: 26px; /* Ligeiramente maior */
     color: var(--text-color);
     margin-bottom: 30px;
