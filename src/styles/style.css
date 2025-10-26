@@ -1,7 +1,7 @@
 /* Configurações Globais */
 @import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Changa:wght@200..800&family=Chango&family=Jua&display=swap');
 :root {
-  --primary-color: #00ff22b4; /* Laranja/Vermelho para destaque */
+  --primary-color: #00ff22b4; /* Verde para destaque */
   --secondary-color: #333;
   --text-color: #1a1a1a;
   --background-light: #f4f4f4;
@@ -40,6 +40,7 @@ header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: var(--background-dark);
 }
 
 .logo {
