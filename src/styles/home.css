@@ -15,7 +15,7 @@ body {
 
 /* --- HEADER / NAVIGATION --- */
 header {
-    background: #222722;
+    background: #f4f4f4;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     padding: 15px 0;
     position: sticky;
