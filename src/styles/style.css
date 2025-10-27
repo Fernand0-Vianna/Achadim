@@ -32,7 +32,7 @@ body {
 /* Cabeçalho (Header) */
 header {
   background: var(--background-dark);
-  padding: 15px 0;
+  padding: 20px 0;
   border-bottom: 1px solid #ddd;
 }
 
@@ -60,8 +60,13 @@ header .container {
 }
 
 .login-button:hover {
-  background-color: #cc5200;
+  background-color: #0ddf42;
 }
+.logo-img {
+    height: 70px;
+    width: auto;
+}
+
 
 /* Seção Principal (Hero) */
 .hero {
