@@ -746,3 +746,158 @@ footer {
 .page-header {
     margin-bottom: 20px;
 }
+
+/* Estilos para o OfertasEmpresas */
+/* Estilos para a seção de propagandas */
+.propagandas {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.section-title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.propagandas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.propaganda-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.propaganda-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.propaganda-content {
+    padding: 25px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.propaganda-content h3 {
+    margin: 0 0 10px 0;
+    color: #2c3e50;
+    font-size: 1.5rem;
+}
+
+.propaganda-content p {
+    color: #666;
+    margin: 5px 0;
+    font-size: 0.95rem;
+}
+
+.propaganda-image {
+    width: 40%;
+    overflow: hidden;
+}
+
+.propaganda-image img,
+.propaganda-image video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.btn-promo {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #39bf36;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    align-self: flex-start;
+}
+
+.btn-promo:hover {
+    background-color: #2e9e2b;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .propaganda-card {
+        flex-direction: column;
+    }
+    
+    .propaganda-image {
+        width: 100%;
+        height: 200px;
+    }
+    
+    .propaganda-content {
+        padding: 20px;
+    }
+}
+
+.ofertasEmpresas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #00c95a75;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.propagandas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #00c95a75;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.linkprosite {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.linkprosite:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+.linkprosite button {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 900;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 20px; /* Bordas bem arredondadas */
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
+}
+    

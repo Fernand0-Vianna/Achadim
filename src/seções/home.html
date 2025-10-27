@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cupons - Achadim!</title>
     <link rel="stylesheet" href="../styles/home.css">
-    <link rel="stylesheet" href="./styles/home.css">
-    <link rel="stylesheet" href="./styles/style.css">    
+    <link rel="stylesheet" href="./styles/home.css"> 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <!-- Link para o CSS do Swiper -->
@@ -237,7 +236,7 @@
                     <p class="cashback">+ até <strong>10% de cashback</strong></p>
                     <p class="cta">Confira as melhores ofertas fast clicando no botão.</p>
                 </div>
-                <button class="action-button" onclick="alert('´FASTSHOP´ COPIADO')">VER OFERTAS</button>
+                <button class="action-button" onclick="alert('´FASTSHOP´ COPIADO')">RESGATAR</button>
             </div>
 
             <div class="offer-card shein">
@@ -250,7 +249,7 @@
                     <p class="cashback">+ até <strong>10% de cashback</strong></p>
                     <p class="cta">Confira as melhores ofertas clicando no botão.</p>
                 </div>
-                <button class="action-button" onclick="alert('´SHEIN´ COPIADO')">VER OFERTAS</button>
+                <button class="action-button" onclick="alert('´SHEIN´ COPIADO')">RESGATAR</button>
             </div>
 
             <div class="offer-card americanas">
@@ -263,7 +262,7 @@
                     <p class="cashback">+ até <strong>10% de cashback</strong></p>
                     <p class="cta">Confira as melhores ofertas Americanas clicando no botão.</p>
                 </div>
-                <button class="action-button" onclick="alert('´AMERICUPOM´ COPIADO')">VER OFERTAS</button>
+                <button class="action-button" onclick="alert('´AMERICUPOM´ COPIADO')">RESGATAR</button>
             </div>
 
             <div class="offer-card casasbahia">
@@ -276,7 +275,7 @@
                     <p class="cashback">+ até <strong>10% de cashback</strong></p>
                     <p class="cta">Confira as melhores ofertas clicando no botão.</p>
                 </div>
-                <button class="action-button" onclick="alert('´CBCUPOM´ COPIADO')">VER OFERTAS</button>
+                <button class="action-button" onclick="alert('´CBCUPOM´ COPIADO')">RESGATAR</button>
             </div>
 
             <div class="offer-card magalu">
@@ -289,7 +288,7 @@
                     <p class="cashback">+ até <strong>5% de cashback</strong></p>
                     <p class="cta">Confira as melhores ofertas Magalu clicando no botão.</p>
                 </div>
-                <button class="action-button" onclick="alert('´MAGALUCUPOM´ COPIADO')">VER OFERTAS</button>
+                <button class="action-button" onclick="alert('´MAGALUCUPOM´ COPIADO')">RESGATAR</button>
             </div>
 
             <div class="offer-card kabum">
@@ -386,24 +385,46 @@
                 <div class="swiper-pagination"></div>
             </div>
         </section>
-        <!-- Ofertas -->
-        <section class="ofertas">
-            <div class="container">
-                <h3>Ofertas</h3>
-                <p>Confira as melhores ofertas para você.</p>
-            </div>
-            <div class="propagandas">
-                <div class="linkprosite">
-                    <p>
-                        <img src="../img/Lojas/Magalu.png" alt="Magalu">
-                        <a href="">Ver mais</a>
-                    </p>
-                </div>   
-            </div>     
-        </section>
     </main>
 
     <!-- PEZÃO -->
+    <!-- Seção de Propagandas -->
+    <section class="propagandas">
+        <div class="container">
+            <h2 class="section-title">Aproveite nossas ofertas especiais</h2>
+            <div class="propagandas-grid">
+                <!-- Propaganda 1 -->
+                <div class="propaganda-card">
+                    <div class="propaganda-content">
+                        <h3>Ganhe 10% OFF</h3>
+                        <p>Use o cupom: <strong>ACHADIM10</strong></p>
+                        <p>Na primeira compra em qualquer loja parceira</p>
+                        <button class="btn-promo">Ver ofertas</button>
+                    </div>
+                    <div class="propaganda-image">
+                        <video autoplay loop muted playsinline>
+                            <source src="../img/promo2.mp4" type="video/mp4">
+                            Seu navegador não suporta o elemento de vídeo.
+                        </video>
+                    </div>
+                </div>
+                
+                <!-- Propaganda 2 -->
+                <div class="propaganda-card">
+                    <div class="propaganda-content">
+                        <h3>Frete Grátis</h3>
+                        <p>Em compras acima de R$ 99,00</p>
+                        <p>Válido para todo o Brasil</p>
+                        <button class="btn-promo">Ver condições</button>
+                    </div>
+                    <div class="propaganda-image">
+                        <img src="../img/Lojas/Fast1.jpg" alt="Frete Grátis">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer>
         <div class="container">
             <p>&copy; 2025 Achadim! | Feito com base em uma estrutura Framer.</p>
