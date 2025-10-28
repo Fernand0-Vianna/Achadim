@@ -152,6 +152,7 @@ header .container {
 
 /* --- PAGE HEADER (Título) --- */
 .page-header {
+    font-family: 'Changa One', sans-serif;
     text-align: center;
     padding: 50px 0 30px;
     color: var(--text-color);
@@ -503,6 +504,7 @@ footer {
 }
 
 .partners-section h2 {
+    font-family: 'Changa One', Changa;
     font-size: 2.2rem;
     color: var(--secondary-color);
     margin-bottom: 10px;
